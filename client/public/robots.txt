@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and API paths
+Disallow: /api/
+Disallow: /api/trpc/
+
+# Sitemap
+Sitemap: https://octagonremovals.co.uk/sitemap.xml

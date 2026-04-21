@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1775479178023,
+      "tag": "0000_smiling_wiccan",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1775487096040,
+      "tag": "0001_rapid_mimic",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1775657912440,
+      "tag": "0002_conscious_galactus",
+      "breakpoints": true
+    }
+  ]
+}
