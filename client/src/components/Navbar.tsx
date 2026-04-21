@@ -100,6 +100,7 @@ export default function Navbar() {
     backgroundColor: DARK,
     border: `1px solid rgba(184,150,12,0.3)`,
     boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+    zIndex: 200,
   };
 
   return (
@@ -163,7 +164,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav links */}
-          <div className="hidden lg:flex items-center gap-0 min-w-0 overflow-hidden">
+          <div className="hidden lg:flex items-center gap-0 min-w-0">
 
             {/* SERVICES dropdown */}
             <div ref={servicesRef} className="relative">
