@@ -1,7 +1,7 @@
 /**
  * ISLINGTON MINI-SITE — ABOUT PAGE
  * Target keywords: "about Octagon Removals Islington", "removals company Islington",
- * "trusted removals N1", "Octagon Removals Est 2015"
+ * "trusted removals N1", "Octagon Removals Est 2017"
  */
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
@@ -26,8 +26,8 @@ export default function IslingtonAbout() {
   return (
     <IslingtonLayout>
       <Helmet>
-        <title>About Octagon Removals Islington | Est. 2015 — London's Premium Removals</title>
-        <meta name="description" content="Octagon Removals has served Islington since 2015. Founded by Pawel Walerczuk, we are London's premium removals company. Fully insured, fixed price, 4.9 Google rating." />
+        <title>About Octagon Removals Islington | Est. 2017 — London's Premium Removals</title>
+        <meta name="description" content="Octagon Removals has served Islington since 2017. Founded by Pawel Walerczuk, we are London's premium removals company. Fully insured, fixed price, 4.9 Google rating." />
         <link rel="canonical" href="https://octagonremovals.co.uk/islington/about" />
       </Helmet>
 
@@ -37,13 +37,13 @@ export default function IslingtonAbout() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(15,25,35,0.88) 0%, rgba(15,25,35,0.4) 70%, transparent 100%)" }} />
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
           <motion.div variants={fadeUp} initial="hidden" animate="visible" className="max-w-xl">
-            <span className="text-xs tracking-widest uppercase mb-4 block" style={{ color: GOLD }}>Est. 2015 · London</span>
+            <span className="text-xs tracking-widest uppercase mb-4 block" style={{ color: GOLD }}>Est. 2017 · London</span>
             <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 600, color: SAND, lineHeight: 1.2 }}>
               About<br />
               <span style={{ color: GOLD, fontStyle: "italic" }}>Octagon Removals</span>
             </h1>
             <p className="mt-4 leading-relaxed" style={{ color: "rgba(245,243,239,0.8)", fontSize: "0.95rem" }}>
-              London's premium removals company, serving Islington and all of London since 2015.
+              London's premium removals company, serving Islington and all of London since 2017.
             </p>
           </motion.div>
         </div>
@@ -59,10 +59,10 @@ export default function IslingtonAbout() {
                 Built on a Simple Belief
               </h2>
               <p className="mt-4 mb-4 leading-relaxed text-sm" style={{ color: "#666" }}>
-                Octagon Removals was founded in 2015 by Pawel Walerczuk with a single belief: that a removal company should treat every client's home as if it were their own. Not as a job to be rushed, but as a responsibility to be honoured.
+                Octagon Removals was founded in 2017 by Pawel Walerczuk with a single belief: that a removal company should treat every client's home as if it were their own. Not as a job to be rushed, but as a responsibility to be honoured.
               </p>
               <p className="mb-4 leading-relaxed text-sm" style={{ color: "#666" }}>
-                Since then, we have completed over 10,000 moves across London and the M25. We have moved families from Islington to Edinburgh, offices from Angel to Amsterdam, and pianos from Canonbury to the countryside.
+                Since then, we have completed over 15,000 moves across London and the M25. We have moved families from Islington to Edinburgh, offices from Angel to Amsterdam, and pianos from Canonbury to the countryside.
               </p>
               <p className="leading-relaxed text-sm" style={{ color: "#666" }}>
                 Every move is assigned a dedicated coordinator, carried out by uniformed professionals, and backed by a fixed-price guarantee. That is not a premium add-on. That is the Octagon Standard.
@@ -87,10 +87,10 @@ export default function IslingtonAbout() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "2015", label: "Year Founded" },
-              { value: "10,000+", label: "Moves Completed" },
+              { value: "2017", label: "Year Founded" },
+              { value: "15,000+", label: "Moves Completed" },
               { value: "4.9★", label: "Google Rating" },
-              { value: "£50,000", label: "Insurance Per Vehicle" },
+              { value: "£1,000,000", label: "Insurance Per Vehicle" },
             ].map(({ value, label }) => (
               <motion.div key={label} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "2rem", fontWeight: 600, color: GOLD }}>{value}</div>
@@ -122,7 +122,7 @@ export default function IslingtonAbout() {
               <ul className="space-y-3">
                 {[
                   "Uniformed, trained professionals",
-                  "£50,000 goods-in-transit insurance",
+                  "£1,000,000 goods-in-transit insurance",
                   "Premium packing materials",
                   "Dedicated coordinator per move",
                   "Fixed price — no hidden charges",

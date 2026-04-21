@@ -116,8 +116,8 @@ export default function IslingtonLayout({ children }: { children: React.ReactNod
           <div>
             <img src={LOGO} alt="Octagon Removals" className="h-10 w-auto mb-4 opacity-90" />
             <p className="text-sm leading-relaxed mb-4">
-              Professional removals across Islington and all of London since 2015.
-              Fixed price or hourly rate. Fully insured up to £50,000 per vehicle.
+              Professional removals across Islington and all of London since 2017.
+              Fixed price or hourly rate. Fully insured up to £1,000,000 per vehicle.
             </p>
             <div className="flex items-center gap-1 mb-1">
               {[1,2,3,4,5].map(i => <Star key={i} size={12} fill={GOLD} style={{ color: GOLD }} />)}
@@ -159,7 +159,7 @@ export default function IslingtonLayout({ children }: { children: React.ReactNod
           </div>
         </div>
         <div className="border-t px-6 py-4 text-center text-xs opacity-40" style={{ borderColor: "rgba(245,243,239,0.1)" }}>
-          © {new Date().getFullYear()} Octagon Removals Ltd · Est. 2015 · Company No. 09876543 · All rights reserved
+          © {new Date().getFullYear()} Octagon Removals Ltd · Est. 2017 · Company No. 09876543 · All rights reserved
         </div>
       </footer>
     </div>

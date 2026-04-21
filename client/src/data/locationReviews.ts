@@ -1,5 +1,5 @@
 // Real customer reviews from Google Reviews and Trustpilot
-// Keyed by location slug — used on dedicated location pages
+// Keyed by location slug - used on dedicated location pages
 
 export interface LocationReview {
   author: string;
@@ -15,7 +15,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Graham",
       rating: 5,
-      text: "Had a wonderful experience with Octagon Watford Removals — moving from storage in Watford to North London. Response to a request for quote was prompt, without being pushy. Price was competitive, crew were polite, professional and easy to work with. Everything was completed within the timescale. I would use them again without hesitation.",
+      text: "Had a wonderful experience with Octagon Watford Removals - moving from storage in Watford to North London. Response to a request for quote was prompt, without being pushy. Price was competitive, crew were polite, professional and easy to work with. Everything was completed within the timescale. I would use them again without hesitation.",
       date: "January 2025",
       source: "Trustpilot",
       location: "Watford",
@@ -69,7 +69,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Anonymous",
       rating: 5,
-      text: "Moved from Epsom to Ashtead. Men arrived on time — in fact 10 minutes early — which was great. They were professional, courteous and hard working! They got to work in a flash! Would highly recommend!",
+      text: "Moved from Epsom to Ashtead. Men arrived on time - in fact 10 minutes early - which was great. They were professional, courteous and hard working! They got to work in a flash! Would highly recommend!",
       date: "October 2023",
       source: "Trustpilot",
       location: "Epsom",
@@ -132,7 +132,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Patricia Marcos",
       rating: 5,
-      text: "Fantastic service — the team were punctual, professional and incredibly careful with our furniture. They moved us from Wandsworth to Clapham without a single scratch. The price was exactly as quoted. Highly recommend.",
+      text: "Fantastic service - the team were punctual, professional and incredibly careful with our furniture. They moved us from Wandsworth to Clapham without a single scratch. The price was exactly as quoted. Highly recommend.",
       date: "November 2024",
       source: "Google",
       location: "Wandsworth",
@@ -165,7 +165,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Kerrita",
       rating: 5,
-      text: "The team were absolutely brilliant — they navigated the narrow Camden streets with ease and got everything up to our third floor flat without complaint. Professional, friendly and great value. Would use again without hesitation.",
+      text: "The team were absolutely brilliant - they navigated the narrow Camden streets with ease and got everything up to our third floor flat without complaint. Professional, friendly and great value. Would use again without hesitation.",
       date: "October 2024",
       source: "Google",
       location: "Camden",
@@ -220,7 +220,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Emma R.",
       rating: 5,
-      text: "The packing team were exceptional — they wrapped everything meticulously and even helped reassemble our furniture in our new Battersea flat. The fixed price meant no nasty surprises on moving day.",
+      text: "The packing team were exceptional - they wrapped everything meticulously and even helped reassemble our furniture in our new Battersea flat. The fixed price meant no nasty surprises on moving day.",
       date: "January 2025",
       source: "Google",
       location: "Battersea",
@@ -242,7 +242,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Anonymous",
       rating: 5,
-      text: "Excellent service from Octagon — moved us from Barnet to St Albans with complete professionalism. The team were friendly, efficient and took great care of all our belongings. Would highly recommend.",
+      text: "Excellent service from Octagon - moved us from Barnet to St Albans with complete professionalism. The team were friendly, efficient and took great care of all our belongings. Would highly recommend.",
       date: "May 2024",
       source: "Google",
       location: "Barnet",
@@ -286,7 +286,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Anonymous",
       rating: 5,
-      text: "Brilliant service from Octagon — moved us from Kingston upon Thames to Surbiton. The team were punctual, professional and took great care of our belongings. The price was competitive and there were no hidden charges.",
+      text: "Brilliant service from Octagon - moved us from Kingston upon Thames to Surbiton. The team were punctual, professional and took great care of our belongings. The price was competitive and there were no hidden charges.",
       date: "March 2024",
       source: "Google",
       location: "Kingston",
@@ -341,7 +341,7 @@ export const locationReviews: Record<string, LocationReview[]> = {
     {
       author: "Anonymous",
       rating: 5,
-      text: "Excellent service from Octagon — moved us from Chiswick to Richmond with complete professionalism. The team navigated the busy streets with ease and everything arrived safely. Highly recommended.",
+      text: "Excellent service from Octagon - moved us from Chiswick to Richmond with complete professionalism. The team navigated the busy streets with ease and everything arrived safely. Highly recommended.",
       date: "May 2024",
       source: "Google",
       location: "Chiswick",
@@ -416,7 +416,7 @@ export const genericReviews: LocationReview[] = [
   {
     author: "Sheena",
     rating: 5,
-    text: "Oh wow — what a team! I cannot thank you enough for all your help. Your guys were amazing and really made a very stressful move more manageable. I would give you 100 stars if I could.",
+    text: "Oh wow - what a team! I cannot thank you enough for all your help. Your guys were amazing and really made a very stressful move more manageable. I would give you 100 stars if I could.",
     date: "November 2023",
     source: "Trustpilot",
   },
@@ -428,3 +428,4 @@ export const genericReviews: LocationReview[] = [
     source: "Trustpilot",
   },
 ];
+

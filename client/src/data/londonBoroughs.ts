@@ -1965,3 +1965,4 @@ export const boroughBySlug = Object.fromEntries(
 
 // Total moves across all boroughs
 export const totalMoves = londonBoroughs.reduce((sum, b) => sum + b.moveCount, 0);
+

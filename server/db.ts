@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, leads, InsertLead } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,41 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// ─── Leads ───────────────────────────────────────────────────────────────────
+
+export async function saveLead(data: Omit<InsertLead, "id" | "createdAt" | "updatedAt">): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot save lead: database not available");
+    return;
+  }
+  try {
+    await db.insert(leads).values(data);
+  } catch (error) {
+    console.error("[Database] Failed to save lead:", error);
+  }
+}
+
+export async function getLeads(limit = 200) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get leads: database not available");
+    return [];
+  }
+  return db.select().from(leads).orderBy(desc(leads.createdAt)).limit(limit);
+}
+
+export async function updateLeadStatus(
+  id: number,
+  status: "new" | "contacted" | "quoted" | "booked" | "lost" | "spam",
+  notes?: string,
+): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot update lead: database not available");
+    return;
+  }
+  const updateData: Record<string, unknown> = { status };
+  if (notes !== undefined) updateData.notes = notes;
+  await db.update(leads).set(updateData).where(eq(leads.id, id));
+}

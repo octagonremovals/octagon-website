@@ -33,7 +33,7 @@ export default function IslingtonHome() {
   return (
     <IslingtonLayout>
       <Helmet>
-        <title>Removals Islington | Octagon Removals — Est. 2015</title>
+        <title>Removals Islington | Octagon Removals — Est. 2017</title>
         <meta name="description" content="Professional house and office removals in Islington. Covering Angel, Highbury, Canonbury, Barnsbury and all N1, N5, N7 postcodes. Fixed price, fully insured. Free quote within 1 hour." />
         <meta name="keywords" content="removals Islington, house removals Islington, moving company Islington, man and van N1, office removals Islington" />
         <link rel="canonical" href="https://octagonremovals.co.uk/islington" />
@@ -67,9 +67,9 @@ export default function IslingtonHome() {
               <span style={{ color: GOLD, fontStyle: "italic" }}>Islington</span>
             </h1>
             <p className="mt-4 mb-8 leading-relaxed" style={{ color: "rgba(245,243,239,0.8)", fontFamily: "DM Sans, sans-serif", fontSize: "1rem" }}>
-              Professional house and office removals across Islington since 2015.
+              Professional house and office removals across Islington since 2017.
               Covering Angel, Highbury, Canonbury, Barnsbury and all N1, N5, N7 postcodes.
-              Fixed price, fully insured up to £50,000 per vehicle.
+              Fixed price, fully insured up to £1,000,000 per vehicle.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/islington/contact">
@@ -97,9 +97,9 @@ export default function IslingtonHome() {
       <div style={{ backgroundColor: CHARCOAL }}>
         <div className="max-w-6xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { icon: Shield, label: "Fully Insured", sub: "Up to £50,000 per vehicle" },
+            { icon: Shield, label: "Fully Insured", sub: "Up to £1,000,000 per vehicle" },
             { icon: CheckCircle2, label: "Fixed Price", sub: "No hidden charges" },
-            { icon: Clock, label: "Est. 2015", sub: "11+ years in London" },
+            { icon: Clock, label: "Est. 2017", sub: "Est. 2017 · London" },
             { icon: Star, label: "4.9 Google", sub: "320+ verified reviews" },
           ].map(({ icon: Icon, label, sub }) => (
             <div key={label} className="flex items-center gap-3">
@@ -180,7 +180,7 @@ export default function IslingtonHome() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Shield, title: "Fully Insured", body: "£50,000 goods-in-transit insurance per vehicle. Your belongings are fully protected." },
+              { icon: Shield, title: "Fully Insured", body: "£1,000,000 goods-in-transit insurance per vehicle. Your belongings are fully protected." },
               { icon: CheckCircle2, title: "Fixed Price", body: "The price we quote is the price you pay. No hidden charges, no surprises on moving day." },
               { icon: Package, title: "Premium Packing", body: "Professional packing materials and trained packers. Everything wrapped and labelled correctly." },
               { icon: Clock, title: "On Time, Every Time", body: "We arrive when we say we will. Your time matters — we respect it." },

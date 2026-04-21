@@ -1,6 +1,6 @@
 // ============================================================
-// OCTAGON REMOVALS — REAL SITE DATA
-// Scraped from octagonremovals.co.uk — all content is real
+// OCTAGON REMOVALS - REAL SITE DATA
+// Scraped from octagonremovals.co.uk - all content is real
 // ============================================================
 
 export const COMPANY = {
@@ -21,7 +21,7 @@ export const COMPANY = {
   trustpilotReviews: "170",
   googleReviews: "323",
   googleRating: "4.9",
-  insurance: "Goods in transit insurance up to £50,000 per vehicle",
+  insurance: "Goods in transit insurance up to £1,000,000 per vehicle",
   hoursWeekday: "Mon–Fri 8:00am–6:00pm",
   hoursSaturday: "Saturday 8:00am–3:00pm",
   responseTime: "We respond to all enquiries within 1 hour during office hours. Out-of-hours enquiries will be responded to as soon as the office reopens.",
@@ -41,26 +41,28 @@ export const LOCAL_PHONES = [
 ];
 
 // ============================================================
-// NAVIGATION — exact structure from live site
+// NAVIGATION - exact structure from live site
 // ============================================================
 export const NAV = {
   services: {
+    residential: [
+      { label: "London Removals Services", href: "/services/house-removals" },
+      { label: "Packing & Unpacking", href: "/services/packing-unpacking" },
+      { label: "Furniture Dismantling & Assembly", href: "/services/furniture-dismantling" },
+      { label: "Pre / Post Cleaning", href: "/services/cleaning" },
+      { label: "House Disposal", href: "/services/disposal" },
+    ],
     commercial: [
-      { label: "Office Relocation Services in London", href: "/services/office-relocation" },
-      { label: "Office Clearance", href: "/services/office-clearance" },
+      { label: "Office Relocation", href: "/services/office-relocation" },
+      { label: "Office Clearance", href: "/services/clearance-disposal" },
       { label: "Porterage", href: "/services/porterage" },
     ],
-    residential: [
-      { label: "London Removals Services", href: "/services/london-removals" },
-      { label: "Packing / Unpacking", href: "/services/packing-unpacking" },
-      { label: "Furniture Dismantling / Reassembling", href: "/services/furniture-dismantling" },
-      { label: "Pre / Post Cleaning", href: "/services/cleaning" },
-      { label: "Disposal", href: "/services/disposal" },
-      { label: "Storage Services", href: "/storage" },
+    storage: [
+      { label: "London Storage Services", href: "/storage" },
     ],
     specialised: [
       { label: "London Piano Moving", href: "/services/piano-moving" },
-      { label: "London International Removals", href: "/services/international-removals" },
+      { label: "International Removals", href: "/services/international-removals" },
     ],
   },
   about: [
@@ -87,7 +89,7 @@ export const NAV = {
     { label: "Dartford", href: "/locations/dartford" },
     { label: "Uxbridge", href: "/locations/uxbridge" },
     { label: "Brentwood", href: "/locations/brentwood" },
-    // New domains — April 2026
+    // New domains - April 2026
     { label: "Southwark", href: "/locations/southwark" },
     { label: "Lambeth", href: "/locations/lambeth" },
     { label: "City of London", href: "/locations/city-of-london" },
@@ -102,12 +104,11 @@ export const NAV = {
     { label: "Redbridge", href: "/locations/redbridge" },
     { label: "Sutton", href: "/locations/sutton" },
     { label: "Bexley", href: "/locations/bexley" },
-    { label: "Finchley", href: "/locations/finchley" },
   ],
 };
 
 // ============================================================
-// SERVICES — real content from WordPress API
+// SERVICES - real content from WordPress API
 // ============================================================
 export interface Service {
   slug: string;
@@ -130,7 +131,7 @@ export const SERVICES: Service[] = [
     features: [
       "Full packing and unpacking service available",
       "Furniture dismantling and reassembly",
-      "Fixed-price guarantee — no hidden charges",
+      "Fixed-price guarantee - no hidden charges",
       "Fully insured goods in transit",
       "Covering London, Essex, Kent, Middlesex, Surrey & Hertfordshire",
       "Same-day and short-notice moves available",
@@ -142,7 +143,7 @@ export const SERVICES: Service[] = [
     title: "Packing / Unpacking",
     category: "residential",
     excerpt: "With over a decade of expertise, we provide comprehensive packing and unpacking services for a smooth transition.",
-    description: "With over a decade of expertise, Octagon Removals provides comprehensive packing and unpacking services to ensure a smooth transition to your new home. We understand the challenges busy families face during a move. Our professional packing team uses premium materials — double-walled boxes, bubble wrap, packing paper, and custom crates for fragile items — to ensure everything arrives safely.",
+    description: "With over a decade of expertise, Octagon Removals provides comprehensive packing and unpacking services to ensure a smooth transition to your new home. We understand the challenges busy families face during a move. Our professional packing team uses premium materials - double-walled boxes, bubble wrap, packing paper, and custom crates for fragile items - to ensure everything arrives safely.",
     features: [
       "Premium packing materials included",
       "Specialist wrapping for fragile and antique items",
@@ -157,10 +158,10 @@ export const SERVICES: Service[] = [
     slug: "furniture-dismantling",
     title: "Furniture Dismantling / Reassembling",
     category: "residential",
-    excerpt: "Expert furniture dismantling and reassembly — we treat each piece as an integral part of your life.",
-    description: "Octagon Removals: Simplifying Your Move with Expert Furniture Dismantling and Reassembly. We understand that your furniture holds memories and meaning, and we treat each piece as an integral part of your life. Our goal is to ensure that your belongings are handled with the utmost care and professionalism. Our skilled team can dismantle and reassemble all types of furniture — from flat-pack wardrobes to complex bespoke pieces.",
+    excerpt: "Expert furniture dismantling and reassembly - we treat each piece as an integral part of your life.",
+    description: "Octagon Removals: Simplifying Your Move with Expert Furniture Dismantling and Reassembly. We understand that your furniture holds memories and meaning, and we treat each piece as an integral part of your life. Our goal is to ensure that your belongings are handled with the utmost care and professionalism. Our skilled team can dismantle and reassemble all types of furniture - from flat-pack wardrobes to complex bespoke pieces.",
     features: [
-      "All furniture types — flat-pack to bespoke",
+      "All furniture types - flat-pack to bespoke",
       "Skilled assembly team with full toolkit",
       "Careful labelling and bagging of all fixings",
       "Reassembly at destination included",
@@ -189,7 +190,7 @@ export const SERVICES: Service[] = [
     slug: "disposal",
     title: "Disposal",
     category: "residential",
-    excerpt: "Responsible disposal of unwanted items — furniture, appliances, and general clearance.",
+    excerpt: "Responsible disposal of unwanted items - furniture, appliances, and general clearance.",
     description: "Moving is the perfect time to declutter. Our disposal service handles the responsible removal and recycling of unwanted furniture, appliances, and general household items. We work with licensed waste carriers to ensure items are disposed of legally and sustainably.",
     features: [
       "Licensed waste carrier",
@@ -203,7 +204,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "storage",
-    title: "Storage",
+    title: "Storage In London",
     category: "residential",
     excerpt: "Secure, climate-controlled storage facilities. Short and long-term options available across London.",
     description: "Our secure storage facilities offer flexible short and long-term solutions for residential and commercial clients. Whether you need to store items between moves, during renovations, or for business purposes, our climate-controlled units keep your belongings safe and accessible.",
@@ -255,7 +256,7 @@ export const SERVICES: Service[] = [
     title: "Porterage",
     category: "commercial",
     excerpt: "Flexible, reliable porterage solutions for businesses and property managers across London.",
-    description: "At Octagon Removals, we deliver flexible, reliable porterage solutions for businesses and property managers across London. From office relocation to on-site logistics, our experienced team supports day-to-day operations and complex projects with efficiency and care. Fast & Flexible Response — our team is available at short notice to support your operational needs.",
+    description: "At Octagon Removals, we deliver flexible, reliable porterage solutions for businesses and property managers across London. From office relocation to on-site logistics, our experienced team supports day-to-day operations and complex projects with efficiency and care. Fast & Flexible Response - our team is available at short notice to support your operational needs.",
     features: [
       "Fast and flexible response",
       "On-site logistics support",
@@ -271,8 +272,8 @@ export const SERVICES: Service[] = [
     slug: "piano-moving",
     title: "London Piano Moving",
     category: "specialised",
-    excerpt: "Your piano is not just an instrument — it's a vessel of cherished memories. We are custodians of your musical journey.",
-    description: "At Octagon Removals, we recognise that your piano is not just an instrument; it's a vessel of cherished memories and emotions. Serving the heart of London, Essex, Kent, Middlesex, Surrey, and Hertfordshire, we see ourselves as more than movers — we are custodians of your musical journey. Every piano has a story. Our specialist piano moving team uses purpose-built equipment and decades of experience.",
+    excerpt: "Your piano is not just an instrument - it's a vessel of cherished memories. We are custodians of your musical journey.",
+    description: "At Octagon Removals, we recognise that your piano is not just an instrument; it's a vessel of cherished memories and emotions. Serving the heart of London, Essex, Kent, Middlesex, Surrey, and Hertfordshire, we see ourselves as more than movers - we are custodians of your musical journey. Every piano has a story. Our specialist piano moving team uses purpose-built equipment and decades of experience.",
     features: [
       "Upright, grand, and baby grand pianos",
       "Specialist piano moving equipment",
@@ -287,10 +288,10 @@ export const SERVICES: Service[] = [
     slug: "international-removals",
     title: "London International Removals",
     category: "specialised",
-    excerpt: "We exclusively transport your items in our vehicles — we do not mix your goods with other clients.",
+    excerpt: "We exclusively transport your items in our vehicles - we do not mix your goods with other clients. From London to anywhere in Europe.",
     description: "London International Removals with Octagon Removals: Your Transition Partner. What sets us apart is that we exclusively transport your items in our vehicles. We do not mix your goods with those of other clients. We also do not wait for the container to be fully loaded, which may result in you waiting weeks. Your belongings travel directly to your destination.",
     features: [
-      "Exclusive vehicle — no shared loads",
+      "Exclusive vehicle - no shared loads",
       "Door-to-door international service",
       "Full customs documentation",
       "Comprehensive international insurance",
@@ -302,12 +303,13 @@ export const SERVICES: Service[] = [
 ];
 
 // ============================================================
-// TEAM MEMBERS — real data from WordPress API
+// TEAM MEMBERS - real data from WordPress API
 // ============================================================
 export interface TeamMember {
   name: string;
   role: string;
   bio: string;
+  photo?: string;
   skills: { label: string; value: number }[];
 }
 
@@ -315,18 +317,21 @@ export const TEAM: TeamMember[] = [
   {
     name: "Pawel Walerczuk",
     role: "Sales & Operations Director",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/pawel_ca012d8c.jpg",
     bio: "Pawel is our 'Frontman'. His unique approach and dedication to understanding our clients' needs are rocket fuel to our company. Pawel loves reading, camping, walking his dog, and being involved in the community.",
     skills: [{ label: "Sales", value: 100 }, { label: "Staff Management", value: 90 }, { label: "Order Tracking", value: 88 }],
   },
   {
     name: "Oliwia Chmielewska",
     role: "Operations Manager",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/oliwia_3e225f35.jpg",
     bio: "Oliwia ensures every move is planned with precision. From the first call to the final details, she makes sure everything runs smoothly, offering guidance and support every step of the way.",
     skills: [{ label: "Sales", value: 80 }, { label: "Staff Management", value: 70 }, { label: "Administration", value: 88 }],
   },
   {
     name: "Nicoll Walerczuk",
     role: "Moving Consultant",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/nicoll_b04bfbb2.jpg",
     bio: "Nicoll is one of our moving consultants who is always on alert to help our clients with their requests. Extremely friendly and dedicated to helping our clients find the right solution.",
     skills: [{ label: "Sales", value: 80 }, { label: "Staff Management", value: 70 }, { label: "Order Tracking", value: 88 }],
   },
@@ -345,13 +350,14 @@ export const TEAM: TeamMember[] = [
   {
     name: "Ramunas Rimdeika",
     role: "Driver & Moving Expert",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/ramunas_069f10f0.jpg",
     bio: "Every great moving team needs someone who knows their way around both the road and a toolbox, and that's Ramunas! As a skilled driver and moving expert, he makes sure every job runs on time and on budget.",
     skills: [{ label: "Moving Homes", value: 100 }, { label: "Furniture Dismantling", value: 100 }, { label: "Punctuality", value: 96 }],
   },
   {
     name: "Kajetan Kulacki",
     role: "Residential Moving Expert",
-    bio: "Kajetan is our Residential Moving Expert — experienced, friendly, and always performs his work with a smile. He likes to travel, spend time with his family, and take pride in every move he completes.",
+    bio: "Kajetan is our Residential Moving Expert - experienced, friendly, and always performs his work with a smile. He likes to travel, spend time with his family, and take pride in every move he completes.",
     skills: [{ label: "Moving Homes", value: 100 }, { label: "Packing", value: 100 }, { label: "Punctuality", value: 96 }],
   },
   {
@@ -363,12 +369,13 @@ export const TEAM: TeamMember[] = [
   {
     name: "Bartosz Fronczak",
     role: "Packing & Loading Expert",
-    bio: "Bartosz is our Packing and Loading Expert. At Octagon Removals, every successful move starts with careful packing and loading — and that's where Bartek shines. Outside of work, Bartosz's passion for bikes keeps him busy.",
+    bio: "Bartosz is our Packing and Loading Expert. At Octagon Removals, every successful move starts with careful packing and loading - and that's where Bartek shines. Outside of work, Bartosz's passion for bikes keeps him busy.",
     skills: [{ label: "Residential Moves", value: 100 }, { label: "Packing", value: 100 }, { label: "Punctuality", value: 100 }],
   },
   {
     name: "Lukasz Morzyc",
     role: "Moving Expert",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/lukasz_83c3a705.jpg",
     bio: "With strength, precision, and dedication, Lukasz helps make even the heaviest moves feel light. You'll often find him lifting with perfect form, whether it's boxes or barbells! Outside of work, Lukasz is passionate about fitness.",
     skills: [{ label: "Loading", value: 100 }, { label: "Packing", value: 100 }, { label: "Heavy Lifting", value: 100 }],
   },
@@ -381,19 +388,21 @@ export const TEAM: TeamMember[] = [
   {
     name: "Ahmed Shariff",
     role: "Moving Expert",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/ahmed_81d42fd8.jpg",
     bio: "Ahmed is the Visionary of Our Team. As one of our moving experts, he ensures every job is handled with precision and care, always bringing a positive attitude. Outside of work, Ahmed is passionate about travelling.",
     skills: [{ label: "Loading", value: 100 }, { label: "Packing", value: 100 }, { label: "Customer Service", value: 100 }],
   },
   {
     name: "Filip Pekala",
     role: "Moving Expert",
+    photo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663390692301/ZpcSodCKLQfFZqhkQybBpR/filip_729053c3.jpg",
     bio: "Filip may be one of our younger team members, but his precision, strength, and attention to detail make him a key part of every move. Whether securing fragile items or ensuring a smooth load, Filip delivers.",
     skills: [{ label: "Residential Moves", value: 100 }, { label: "Packing", value: 100 }, { label: "Customer Service", value: 100 }],
   },
 ];
 
 // ============================================================
-// TESTIMONIALS — real reviews from WordPress API
+// TESTIMONIALS - real reviews from WordPress API
 // ============================================================
 export interface Testimonial {
   name: string;
@@ -433,14 +442,14 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Sarah M.",
     rating: 5,
-    text: "The packing team were exceptional — they wrapped everything meticulously and even helped reassemble our furniture. The fixed price meant no nasty surprises on moving day.",
+    text: "The packing team were exceptional - they wrapped everything meticulously and even helped reassemble our furniture. The fixed price meant no nasty surprises on moving day.",
     source: "trustpilot",
     location: "Richmond",
   },
   {
     name: "David L.",
     rating: 5,
-    text: "Used Octagon for our piano move — an incredibly delicate job. They handled it with complete professionalism and the piano arrived in perfect condition. Highly recommended.",
+    text: "Used Octagon for our piano move - an incredibly delicate job. They handled it with complete professionalism and the piano arrived in perfect condition. Highly recommended.",
     source: "google",
     location: "Islington",
   },
@@ -454,14 +463,14 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Michael B.",
     rating: 5,
-    text: "Octagon handled our international move to Germany. They exclusively used their own vehicle — no shared loads — which gave us complete peace of mind. Everything arrived on time and in perfect condition.",
+    text: "Octagon handled our international move to Germany. They exclusively used their own vehicle - no shared loads - which gave us complete peace of mind. Everything arrived on time and in perfect condition.",
     source: "google",
     location: "Fulham",
   },
 ];
 
 // ============================================================
-// LOCATIONS — all 17 areas with real local phone numbers
+// LOCATIONS - all 17 areas with real local phone numbers
 // ============================================================
 export interface Location {
   slug: string;
@@ -790,7 +799,7 @@ export const LOCATIONS: Location[] = [
 
 
 // ============================================================
-// COMPANY STORY — real content from Our Story page
+// COMPANY STORY - real content from Our Story page
 // ============================================================
 export const COMPANY_STORY = {
   headline: "Artists Of Removals",
@@ -804,10 +813,11 @@ export const COMPANY_STORY = {
     "For as long as we keep setting and reaching new milestones, our mission to 'make room for our clients' expansion' propels us forward, eager for the next chapter to unfold. So our story continues!",
   ],
   coreValues: [
-    { title: "Integrity", desc: "We are transparent in everything we do. The price we quote is the price you pay — no hidden charges, ever." },
+    { title: "Integrity", desc: "We are transparent in everything we do. The price we quote is the price you pay - no hidden charges, ever." },
     { title: "Precision", desc: "Every move is planned meticulously. We treat your belongings as our own, with white-glove care at every stage." },
     { title: "Reliability", desc: "We arrive on time, every time. Our clients trust us because we consistently deliver on our promises." },
     { title: "Community", desc: "As a London family business, we are deeply rooted in the communities we serve across the city and the M25." },
   ],
-  mission: "To make room for our clients' expansion — by providing the most professional, stress-free, and fairly priced removal services in London.",
+  mission: "To make room for our clients' expansion - by providing the most professional, stress-free, and fairly priced removal services in London.",
 };
+

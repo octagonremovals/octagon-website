@@ -79,7 +79,7 @@ export default function IslingtonOfficeRemovals() {
                   "Colour-coded labelling system for fast setup",
                   "Furniture dismantling and reassembly",
                   "Secure document and file handling",
-                  "£50,000 goods-in-transit insurance",
+                  "£1,000,000 goods-in-transit insurance",
                   "Fixed price — no hidden charges",
                 ].map(item => (
                   <li key={item} className="flex items-start gap-3 text-sm" style={{ color: "#555" }}>
@@ -112,7 +112,7 @@ export default function IslingtonOfficeRemovals() {
             {[
               { icon: Clock, title: "Out of Hours", body: "We move your office over the weekend so your team is ready for Monday morning." },
               { icon: Building2, title: "Any Size Office", body: "From a 5-person startup to a 200-person corporate relocation — we scale to your needs." },
-              { icon: Shield, title: "Fully Insured", body: "£50,000 goods-in-transit and £1M public liability insurance for complete peace of mind." },
+              { icon: Shield, title: "Fully Insured", body: "£1,000,000 goods-in-transit and public liability insurance for complete peace of mind." },
               { icon: Users, title: "Dedicated Manager", body: "One point of contact throughout. Your move coordinator handles everything." },
             ].map(({ icon: Icon, title, body }) => (
               <motion.div key={title} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}

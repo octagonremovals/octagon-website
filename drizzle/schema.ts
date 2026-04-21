@@ -97,3 +97,27 @@ export const layoutAnnotations = mysqlTable("layout_annotations", {
 
 export type LayoutAnnotation = typeof layoutAnnotations.$inferSelect;
 export type InsertLayoutAnnotation = typeof layoutAnnotations.$inferInsert;
+
+// ─── Leads ───────────────────────────────────────────────────────────────────
+
+export const leads = mysqlTable("leads", {
+  id: int("id").autoincrement().primaryKey(),
+  type: mysqlEnum("type", ["quote", "contact", "callback", "checklist"]).notNull(),
+  status: mysqlEnum("status", ["new", "contacted", "quoted", "booked", "lost", "spam"]).default("new").notNull(),
+  name: varchar("name", { length: 256 }).notNull(),
+  email: varchar("email", { length: 320 }),
+  phone: varchar("phone", { length: 32 }),
+  moveType: varchar("moveType", { length: 128 }),
+  fromPostcode: varchar("fromPostcode", { length: 16 }),
+  toPostcode: varchar("toPostcode", { length: 16 }),
+  moveDate: varchar("moveDate", { length: 64 }),
+  propertySize: varchar("propertySize", { length: 64 }),
+  message: text("message"),
+  source: varchar("source", { length: 256 }),
+  notes: text("notes"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Lead = typeof leads.$inferSelect;
+export type InsertLead = typeof leads.$inferInsert;

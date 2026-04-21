@@ -26,7 +26,7 @@ const FAQS = [
   { q: "Do you cover all Islington postcodes?", a: "Yes — we cover the entire London Borough of Islington including Angel, Highbury, Canonbury, Barnsbury, Clerkenwell, Finsbury Park, Holloway, and all N1, N5, N7 postcodes." },
   { q: "Can you pack for me as well as move?", a: "Absolutely. Our full packing service includes professional-grade materials (double-walled boxes, tissue paper, bubble wrap), careful wrapping of all items, and full reassembly at your new home." },
   { q: "How far in advance should I book?", a: "We recommend booking 2 to 4 weeks in advance for weekend moves in Islington, which are in high demand. However, we often accommodate last-minute bookings — call us on 0208 521 8000 to check availability." },
-  { q: "Are you insured for moves in Islington?", a: "Yes. We carry £50,000 goods-in-transit insurance per vehicle and £1,000,000 public liability insurance. Your belongings are fully protected throughout your Islington move." },
+  { q: "Are you insured for moves in Islington?", a: "Yes. We carry £1,000,000 goods-in-transit insurance per vehicle and £1,000,000 public liability insurance. Your belongings are fully protected throughout your Islington move." },
 ];
 
 export default function IslingtonHouseRemovals() {
@@ -34,7 +34,7 @@ export default function IslingtonHouseRemovals() {
     <IslingtonLayout>
       <Helmet>
         <title>House Removals Islington | Octagon Removals — Fixed Price, Fully Insured</title>
-        <meta name="description" content="Professional house removals in Islington. Covering Angel, Highbury, Canonbury, N1, N5, N7. Fixed price, fully insured up to £50,000. Free quote within 1 hour." />
+        <meta name="description" content="Professional house removals in Islington. Covering Angel, Highbury, Canonbury, N1, N5, N7. Fixed price, fully insured up to £1,000,000. Free quote within 1 hour." />
         <link rel="canonical" href="https://octagonremovals.co.uk/islington/house-removals" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -94,7 +94,7 @@ export default function IslingtonHouseRemovals() {
                   "All packing materials (boxes, tape, bubble wrap)",
                   "Professional packing and wrapping",
                   "Furniture dismantling and reassembly",
-                  "£50,000 goods-in-transit insurance",
+                  "£1,000,000 goods-in-transit insurance",
                   "Dedicated move coordinator",
                   "Fixed price — no hidden charges",
                 ].map(item => (

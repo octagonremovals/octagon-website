@@ -11,12 +11,12 @@ import {
   sendCallbackRequestEmail,
   sendChecklistLeadEmail,
 } from "./email";
-import { getDb } from "./db";
+import { getDb, saveLead, getLeads, updateLeadStatus } from "./db";
 import { chatSessions, chatMessages, layoutAnnotations } from "../drizzle/schema";
 import { eq, desc, and } from "drizzle-orm";
 
 // ── Octagon AI system prompt ────────────────────────────────────────────────
-const OCTAGON_SYSTEM_PROMPT = `You are the Octagon Removals AI assistant — a helpful, professional, and friendly virtual advisor for Octagon Removals Ltd, London's premium removals company.
+const OCTAGON_SYSTEM_PROMPT = `You are the Octagon Removals AI assistant - a helpful, professional, and friendly virtual advisor for Octagon Removals Ltd, London's premium removals company.
 
 COMPANY FACTS:
 - Company: Octagon Removals Ltd
@@ -27,7 +27,7 @@ COMPANY FACTS:
 - WhatsApp: Available via the website
 - Trustpilot: 4.9/5 from 171 reviews
 - Google Reviews: 323 reviews
-- Experience: 10+ years, 10,000+ moves completed
+- Experience: 10+ years, 15,000+ moves completed
 - Fully insured, fixed-price quotes, no hidden charges
 
 SERVICES:
@@ -47,7 +47,7 @@ AREAS COVERED (with local numbers):
 - Lewisham: 0208 927 0544
 - Also: Croydon, Orpington, Enfield, Epping, Finchley, Fulham, Kingston, Dartford, Twickenham, Uxbridge, North/South/East/West/Central London
 
-PRICING GUIDANCE (estimates only — always recommend a free survey for exact pricing):
+PRICING GUIDANCE (estimates only - always recommend a free survey for exact pricing):
 - Studio/bedsit local move: from ~£280
 - 1 bed local: from ~£380
 - 2 bed local: from ~£520
@@ -70,7 +70,7 @@ TONE & BEHAVIOUR:
 - If asked about exact prices, give a ballpark range and explain that a free survey gives an exact fixed price.
 - If asked about availability, tell them to call or fill in the quote form.
 - Never make up information. If unsure, say "I'd recommend calling us on 0208 521 8000 for the most accurate answer."
-- Keep responses concise — 2–4 sentences max unless the user asks for detail.
+- Keep responses concise - 2–4 sentences max unless the user asks for detail.
 - End responses with a gentle nudge toward getting a quote or calling, but don't be pushy.`;
 
 // ── CHAT ADMIN (tRPC procedures for the owner dashboard) ──────────────────
@@ -221,7 +221,7 @@ export const appRouter = router({
           ? new Date(input.moveDate).toLocaleDateString("en-GB", { weekday: "long", year: "numeric", month: "long", day: "numeric" })
           : "Not specified";
 
-        const notifContent = `🏠 NEW QUOTE REQUEST — Octagon Removals
+        const notifContent = `🏠 NEW QUOTE REQUEST - Octagon Removals
 
 👤 Name: ${input.name}
 📞 Phone: ${input.phone}
@@ -238,10 +238,26 @@ export const appRouter = router({
 
 ⏰ Submitted: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })}`.trim();
 
-        // Fire both notification and email in parallel — neither blocks the response
+        // Save lead to database first (non-blocking on failure)
+        await saveLead({
+          type: "quote",
+          status: "new",
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          moveType: input.moveType,
+          fromPostcode: input.fromPostcode.toUpperCase(),
+          toPostcode: input.toPostcode.toUpperCase(),
+          moveDate: input.moveDate,
+          propertySize: input.propertySize,
+          message: input.message,
+          source: input.source || "/quote",
+        });
+
+        // Fire notification and email in parallel - neither blocks the response
         await Promise.allSettled([
           notifyOwner({
-            title: `🚚 New Quote Request — ${input.name} (${input.fromPostcode.toUpperCase()} → ${input.toPostcode.toUpperCase()})`,
+            title: `🚚 New Quote Request - ${input.name} (${input.fromPostcode.toUpperCase()} → ${input.toPostcode.toUpperCase()})`,
             content: notifContent,
           }),
           sendQuoteLeadEmail({
@@ -273,7 +289,7 @@ export const appRouter = router({
         subject: z.string().optional(),
       }))
       .mutation(async ({ input }) => {
-        const notifContent = `📩 NEW CONTACT MESSAGE — Octagon Removals
+        const notifContent = `📩 NEW CONTACT MESSAGE - Octagon Removals
 
 👤 Name: ${input.name}
 📞 Phone: ${input.phone || "Not provided"}
@@ -284,6 +300,16 @@ export const appRouter = router({
 ${input.message}
 
 ⏰ Submitted: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })}`.trim();
+
+        await saveLead({
+          type: "contact",
+          status: "new",
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          message: input.message,
+          source: input.subject || "/contact",
+        });
 
         await Promise.allSettled([
           notifyOwner({
@@ -311,20 +337,37 @@ ${input.message}
         phone: z.string().min(7),
         bestTime: z.string().optional(),
         source: z.string().optional(),
+        destination: z.string().optional(),
+        moveDate: z.string().optional(),
       }))
       .mutation(async ({ input }) => {
-        const notifContent = `📞 CALLBACK REQUEST — Octagon Removals
+        const intlLines = [
+          input.destination ? `🌍 Destination: ${input.destination}` : null,
+          input.moveDate ? `📅 Move Date: ${input.moveDate}` : null,
+        ].filter(Boolean).join("\n");
 
-👤 Name: ${input.name}
-📞 Phone: ${input.phone}
-⏰ Best Time: ${input.bestTime || "As soon as possible"}
-🔗 Source: ${input.source || "Website"}
+        const notifContent = `📞 CALLBACK REQUEST - Octagon Removals${
+          input.destination ? " (INTERNATIONAL LEAD)" : ""
+        }\n\n👤 Name: ${input.name}\n📞 Phone: ${input.phone}\n⏰ Best Time: ${input.bestTime || "As soon as possible"}${intlLines ? "\n" + intlLines : ""}\n🔗 Source: ${input.source || "Website"}\n\nSubmitted: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })}`.trim();
 
-Submitted: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })}`.trim();
+        const messageLines = [
+          input.bestTime ? `Best time: ${input.bestTime}` : null,
+          input.destination ? `Destination: ${input.destination}` : null,
+          input.moveDate ? `Move date: ${input.moveDate}` : null,
+        ].filter(Boolean).join(" | ");
+
+        await saveLead({
+          type: "callback",
+          status: "new",
+          name: input.name,
+          phone: input.phone,
+          message: messageLines || undefined,
+          source: input.source || "/callback",
+        });
 
         await Promise.allSettled([
           notifyOwner({
-            title: `📞 Callback Request — ${input.name} (${input.phone})`,
+            title: `📞 ${input.destination ? "🌍 INTL " : ""}Callback - ${input.name} (${input.phone})${input.destination ? " → " + input.destination : ""}`,
             content: notifContent,
           }),
           sendCallbackRequestEmail({
@@ -341,13 +384,29 @@ Submitted: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })}`
         };
       }),
 
+    getAll: publicProcedure
+      .query(async () => {
+        return getLeads(500);
+      }),
+
+    updateStatus: publicProcedure
+      .input(z.object({
+        id: z.number(),
+        status: z.enum(["new", "contacted", "quoted", "booked", "lost", "spam"]),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        await updateLeadStatus(input.id, input.status, input.notes);
+        return { success: true };
+      }),
+
     captureChecklistLead: publicProcedure
       .input(z.object({
         name: z.string().min(1),
         email: z.string().email(),
       }))
       .mutation(async ({ input }) => {
-        const notifContent = `📋 CHECKLIST DOWNLOAD — Octagon Removals
+        const notifContent = `📋 CHECKLIST DOWNLOAD - Octagon Removals
 
 👤 Name: ${input.name}
 📧 Email: ${input.email}
@@ -355,9 +414,17 @@ Submitted: ${new Date().toLocaleString("en-GB", { timeZone: "Europe/London" })}`
 
 This is a warm lead actively planning a move. Recommended: follow up within 24 hours.`.trim();
 
+        await saveLead({
+          type: "checklist",
+          status: "new",
+          name: input.name,
+          email: input.email,
+          source: "/checklist-download",
+        });
+
         await Promise.allSettled([
           notifyOwner({
-            title: `📋 Checklist Download — ${input.name} (${input.email})`,
+            title: `📋 Checklist Download - ${input.name} (${input.email})`,
             content: notifContent,
           }),
           sendChecklistLeadEmail({ name: input.name, email: input.email }),
@@ -369,3 +436,4 @@ This is a warm lead actively planning a move. Recommended: follow up within 24 h
 });
 
 export type AppRouter = typeof appRouter;
+

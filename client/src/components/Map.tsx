@@ -95,7 +95,7 @@ function loadMapScript() {
   _mapsScriptPromise = new Promise((resolve, reject) => {
     if (window.google?.maps) { resolve(); return; }
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=weekly&loading=async&libraries=marker,places,geocoding,geometry`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=weekly&libraries=marker,places,geocoding,geometry`;
     script.async = true;
     script.defer = true;
     script.onload = () => resolve();

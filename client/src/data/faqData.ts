@@ -20,7 +20,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
     questions: [
       {
         question: "How much does a house removal in London typically cost?",
-        answer: "Every move is unique, so we provide fixed-price quotes based on a free pre-move survey. The cost depends on the volume of items, distance, access at both properties, and any additional services such as packing or storage. We never add hidden charges — the price we quote is the price you pay."
+        answer: "Every move is unique, so we provide fixed-price quotes based on a free pre-move survey. The cost depends on the volume of items, distance, access at both properties, and any additional services such as packing or storage. We never add hidden charges - the price we quote is the price you pay."
       },
       {
         question: "How far in advance should I book my removal?",
@@ -32,7 +32,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Do you offer a packing service?",
-        answer: "Yes. Our professional packing team uses premium double-walled boxes, acid-free tissue paper, and specialist wrapping for fragile items. We can pack your entire home, or just the delicate items — whatever suits you. We also supply self-pack kits if you prefer to do it yourself."
+        answer: "Yes. Our professional packing team uses premium double-walled boxes, acid-free tissue paper, and specialist wrapping for fragile items. We can pack your entire home, or just the delicate items - whatever suits you. We also supply self-pack kits if you prefer to do it yourself."
       },
       {
         question: "Are my belongings insured during the move?",
@@ -52,15 +52,15 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "What access does your removal vehicle need?",
-        answer: "We need enough space for our vehicle to park safely near the property entrance. Please let us know about any height restrictions, narrow lanes, or controlled parking zones. We can arrange parking suspensions with the local council if needed — just let us know in advance."
+        answer: "We need enough space for our vehicle to park safely near the property entrance. Please let us know about any height restrictions, narrow lanes, or controlled parking zones. We can arrange parking suspensions with the local council if needed - just let us know in advance."
       },
       {
         question: "Do you disconnect and reconnect appliances?",
-        answer: "Our team can disconnect and reconnect most appliances including washing machines, dishwashers, and fridges. We do not handle gas appliances — a Gas Safe registered engineer is required for those. We can recommend trusted tradespeople if needed."
+        answer: "Our team can disconnect and reconnect most appliances including washing machines, dishwashers, and fridges. We do not handle gas appliances - a Gas Safe registered engineer is required for those. We can recommend trusted tradespeople if needed."
       },
       {
         question: "What happens if something is damaged during the move?",
-        answer: "We take photographic evidence of every item before and after the move. In the rare event of damage, our claims process is straightforward — report it within 7 days, and we handle it directly. Our comprehensive insurance means you are fully protected."
+        answer: "We take photographic evidence of every item before and after the move. In the rare event of damage, our claims process is straightforward - report it within 7 days, and we handle it directly. Our comprehensive insurance means you are fully protected."
       },
       {
         question: "Do you provide packing materials?",
@@ -96,7 +96,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Can you move a piano?",
-        answer: "Yes — piano removals are one of our specialities. We have moved grand pianos, upright pianos, and even a baby grand across water. Our team uses specialist piano trolleys, straps, and padding. Every piano move is individually risk-assessed."
+        answer: "Yes - piano removals are one of our specialities. We have moved grand pianos, upright pianos, and even a baby grand across water. Our team uses specialist piano trolleys, straps, and padding. Every piano move is individually risk-assessed."
       },
       {
         question: "Do you offer part-load or shared-van services?",
@@ -104,15 +104,15 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "What size van will you use for my move?",
-        answer: "We match the vehicle to the job. Our fleet ranges from transit vans for studio flats to 18-tonne lorries for large family homes. The survey determines the right vehicle — we never send a van that is too small or charge you for space you do not need."
+        answer: "We match the vehicle to the job. Our fleet ranges from transit vans for studio flats to 18-tonne lorries for large family homes. The survey determines the right vehicle - we never send a van that is too small or charge you for space you do not need."
       },
       {
         question: "Can you move garden furniture, sheds, or hot tubs?",
-        answer: "We can move garden furniture, barbecues, and most outdoor items. Sheds and hot tubs require disassembly and specialist handling — let us know during the survey and we will include it in the plan. Some items may need a crane or hiab."
+        answer: "We can move garden furniture, barbecues, and most outdoor items. Sheds and hot tubs require disassembly and specialist handling - let us know during the survey and we will include it in the plan. Some items may need a crane or hiab."
       },
       {
         question: "What payment methods do you accept?",
-        answer: "We accept bank transfer, debit and credit cards, and company purchase orders for corporate clients. Payment is typically due on the day of the move or upon completion. We do not require full payment upfront — just a small deposit to secure your date."
+        answer: "We accept bank transfer, debit and credit cards, and company purchase orders for corporate clients. Payment is typically due on the day of the move or upon completion. We do not require full payment upfront - just a small deposit to secure your date."
       },
       {
         question: "Do you offer end-of-tenancy cleaning?",
@@ -200,7 +200,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Do you offer ongoing porterage services?",
-        answer: "Yes. Beyond one-off moves, we provide regular porterage for businesses that need ongoing support — internal office rearrangements, furniture deliveries, archive management, and ad-hoc heavy lifting."
+        answer: "Yes. Beyond one-off moves, we provide regular porterage for businesses that need ongoing support - internal office rearrangements, furniture deliveries, archive management, and ad-hoc heavy lifting."
       },
       {
         question: "How do you handle parking in central London for office moves?",
@@ -220,7 +220,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Can you handle phased or rolling office moves?",
-        answer: "Yes. Phased moves — where departments relocate in stages — are common for larger businesses. We create a detailed phase plan, ensuring each stage is completed before the next begins, with minimal impact on ongoing operations."
+        answer: "Yes. Phased moves - where departments relocate in stages - are common for larger businesses. We create a detailed phase plan, ensuring each stage is completed before the next begins, with minimal impact on ongoing operations."
       },
       {
         question: "Do you offer furniture disposal and recycling for old office equipment?",
@@ -240,15 +240,15 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "How much does storage cost?",
-        answer: "Storage costs depend on the volume of items and the duration. Our containerised storage starts from competitive weekly rates. We provide a clear quote after assessing your requirements — no hidden fees, no surprise price increases."
+        answer: "Storage costs depend on the volume of items and the duration. Our containerised storage starts from competitive weekly rates. We provide a clear quote after assessing your requirements - no hidden fees, no surprise price increases."
       },
       {
         question: "Is my property insured while in storage?",
-        answer: "We offer storage insurance as part of our service. You can choose cover based on the value of your stored items. We recommend insuring for the full replacement value. Your own home contents insurance may also extend to items in storage — check with your provider."
+        answer: "We offer storage insurance as part of our service. You can choose cover based on the value of your stored items. We recommend insuring for the full replacement value. Your own home contents insurance may also extend to items in storage - check with your provider."
       },
       {
         question: "Is there a minimum storage period?",
-        answer: "Our minimum storage period is one week. There are no long-term commitments — you can extend or end your storage with just 7 days' notice. We understand that moving timelines can change, so we keep things flexible."
+        answer: "Our minimum storage period is one week. There are no long-term commitments - you can extend or end your storage with just 7 days' notice. We understand that moving timelines can change, so we keep things flexible."
       },
       {
         question: "Can I access my items while they are in storage?",
@@ -268,7 +268,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Can you collect my items and take them to storage?",
-        answer: "Yes. We offer a full collection service — our team will come to your property, carefully load your items, and transport them to our storage facility. This can be combined with a removal or booked as a standalone service."
+        answer: "Yes. We offer a full collection service - our team will come to your property, carefully load your items, and transport them to our storage facility. This can be combined with a removal or booked as a standalone service."
       },
       {
         question: "What items cannot be stored?",
@@ -288,7 +288,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "What if I need to extend my storage period?",
-        answer: "Simply let us know. There is no penalty for extending — your rate stays the same, and billing continues on the same cycle. We just ask for notice if you plan to remove items so we can arrange access."
+        answer: "Simply let us know. There is no penalty for extending - your rate stays the same, and billing continues on the same cycle. We just ask for notice if you plan to remove items so we can arrange access."
       },
       {
         question: "Do you offer short-term storage between moves?",
@@ -312,7 +312,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Can I store items while my home is being renovated?",
-        answer: "Absolutely — this is a very common request. We collect your furniture and belongings, store them safely while the work is done, and deliver everything back when your home is ready. It protects your items from dust, paint, and accidental damage."
+        answer: "Absolutely - this is a very common request. We collect your furniture and belongings, store them safely while the work is done, and deliver everything back when your home is ready. It protects your items from dust, paint, and accidental damage."
       },
       {
         question: "What payment methods do you accept for storage?",
@@ -324,11 +324,11 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "How quickly can I get my items out of storage?",
-        answer: "For containerised storage, we typically need 48 hours' notice to arrange delivery. Self-storage units can be accessed the same day during opening hours. For urgent requests, we do our best to accommodate — just call us."
+        answer: "For containerised storage, we typically need 48 hours' notice to arrange delivery. Self-storage units can be accessed the same day during opening hours. For urgent requests, we do our best to accommodate - just call us."
       },
       {
         question: "Will you deliver my stored items back to me?",
-        answer: "Yes. We offer a full redelivery service — our team will bring your items to your new address and place them wherever you direct. This can be booked as a standalone delivery or combined with a full removal service."
+        answer: "Yes. We offer a full redelivery service - our team will bring your items to your new address and place them wherever you direct. This can be booked as a standalone delivery or combined with a full removal service."
       },
       {
         question: "Do you provide an inventory of stored items?",
@@ -339,7 +339,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: "international",
     title: "International Removals",
-    subtitle: "Moving overseas from the UK — customs, shipping, and everything in between",
+    subtitle: "Moving overseas from the UK - customs, shipping, and everything in between",
     icon: "🌍",
     questions: [
       {
@@ -348,7 +348,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "What customs paperwork is required?",
-        answer: "You will need a detailed packing inventory, proof of identity, and a customs declaration form. Requirements vary by destination — some countries require proof of residency, work permits, or specific import licences. We prepare all documentation and guide you through the process."
+        answer: "You will need a detailed packing inventory, proof of identity, and a customs declaration form. Requirements vary by destination - some countries require proof of residency, work permits, or specific import licences. We prepare all documentation and guide you through the process."
       },
       {
         question: "Can I take my car overseas?",
@@ -356,11 +356,11 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Do you offer door-to-door international service?",
-        answer: "Yes. Our international service covers everything from packing at your UK home to delivery and unpacking at your overseas destination. We manage customs clearance, port handling, and local delivery — you do not need to arrange anything at the other end."
+        answer: "Yes. Our international service covers everything from packing at your UK home to delivery and unpacking at your overseas destination. We manage customs clearance, port handling, and local delivery - you do not need to arrange anything at the other end."
       },
       {
         question: "What about customs duties and taxes?",
-        answer: "Most countries allow duty-free import of personal household goods if you are relocating permanently. Conditions vary — some require you to have owned items for 6+ months, others restrict certain categories. We advise on the specific rules for your destination."
+        answer: "Most countries allow duty-free import of personal household goods if you are relocating permanently. Conditions vary - some require you to have owned items for 6+ months, others restrict certain categories. We advise on the specific rules for your destination."
       },
       {
         question: "Do you pack items for international moves?",
@@ -372,11 +372,11 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Do you offer both air freight and sea freight?",
-        answer: "Yes. Sea freight is the most cost-effective for full household moves. Air freight is ideal for urgent shipments or smaller volumes. We also offer a combination — sending essentials by air and the bulk by sea — so you have what you need immediately."
+        answer: "Yes. Sea freight is the most cost-effective for full household moves. Air freight is ideal for urgent shipments or smaller volumes. We also offer a combination - sending essentials by air and the bulk by sea - so you have what you need immediately."
       },
       {
         question: "How is my shipment tracked during transit?",
-        answer: "We provide tracking updates at every stage — collection, port departure, in-transit, port arrival, customs clearance, and final delivery. Your move coordinator keeps you informed throughout, and you can contact us anytime for a status update."
+        answer: "We provide tracking updates at every stage - collection, port departure, in-transit, port arrival, customs clearance, and final delivery. Your move coordinator keeps you informed throughout, and you can contact us anytime for a status update."
       },
       {
         question: "What insurance is available for international moves?",
@@ -392,7 +392,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "How do you handle fragile or valuable items for international shipping?",
-        answer: "High-value and fragile items receive custom crating — wooden cases built to the exact dimensions of the item, with foam lining and shock absorption. Artwork, antiques, and musical instruments are individually assessed and packed by our specialist team."
+        answer: "High-value and fragile items receive custom crating - wooden cases built to the exact dimensions of the item, with foam lining and shock absorption. Artwork, antiques, and musical instruments are individually assessed and packed by our specialist team."
       },
       {
         question: "Do you offer part-load or shared container shipping?",
@@ -404,15 +404,15 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Can I store items in the UK before my international move?",
-        answer: "Yes. Many clients store belongings while they finalise overseas arrangements. We can hold your items in our secure facility and ship them when you are ready. There is no rush — store for as long as you need."
+        answer: "Yes. Many clients store belongings while they finalise overseas arrangements. We can hold your items in our secure facility and ship them when you are ready. There is no rush - store for as long as you need."
       },
       {
         question: "How should I prepare for an international move?",
-        answer: "Start planning 8–12 weeks ahead. Declutter thoroughly — international shipping is charged by volume, so only take what you truly need. Gather important documents, notify relevant authorities of your move, and book your survey with us as early as possible."
+        answer: "Start planning 8–12 weeks ahead. Declutter thoroughly - international shipping is charged by volume, so only take what you truly need. Gather important documents, notify relevant authorities of your move, and book your survey with us as early as possible."
       },
       {
         question: "What about electrical appliances and voltage differences?",
-        answer: "Many countries use different voltages and plug types. Some appliances (especially those with motors or heating elements) may not work abroad even with an adapter. We recommend checking compatibility before shipping large appliances — it may be more economical to buy new locally."
+        answer: "Many countries use different voltages and plug types. Some appliances (especially those with motors or heating elements) may not work abroad even with an adapter. We recommend checking compatibility before shipping large appliances - it may be more economical to buy new locally."
       },
       {
         question: "Do you offer unpacking and setup at the destination?",
@@ -428,7 +428,7 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         question: "Do you assist with visa or immigration paperwork?",
-        answer: "We do not provide immigration advice, but we can connect you with trusted immigration consultants and relocation specialists. We focus on what we do best — getting your belongings there safely — while our partners handle the administrative side."
+        answer: "We do not provide immigration advice, but we can connect you with trusted immigration consultants and relocation specialists. We focus on what we do best - getting your belongings there safely - while our partners handle the administrative side."
       },
       {
         question: "What is a T1 transit document?",
@@ -445,3 +445,4 @@ export const FAQ_CATEGORIES: FAQCategory[] = [
     ]
   }
 ];
+

@@ -85,6 +85,7 @@ function Router() {
       <Route path="/services/furniture-dismantling" component={FurnitureDismantlingPage} />
       <Route path="/services/piano-moving" component={PianoMovingPage} />
       <Route path="/services/international-removals" component={InternationalRemovalsPage} />
+      {/* International destination pages - /international-removals/france etc */}
       <Route path="/international-removals/:country" component={InternationalCountryPage} />
       <Route path="/services/porterage" component={PorteragePage} />
       <Route path="/services/cleaning" component={CleaningPage} />
