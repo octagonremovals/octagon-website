@@ -623,7 +623,7 @@ export default function LocationPage({ data, locationPhotos = [] }: { data: Loca
               <div className="flex flex-col">
                 <div className="flex-1 relative" style={{ minHeight: 280, backgroundColor: "#1A2535" }}>
                   <iframe
-                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Octagon+Removals+London&zoom=11`}
+                    src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Octagon+Removals+London&zoom=11`}
                     className="absolute inset-0 w-full h-full"
                     style={{ border: 0, filter: "grayscale(0.3) contrast(1.1)" }}
                     allowFullScreen
