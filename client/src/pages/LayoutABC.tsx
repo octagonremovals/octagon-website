@@ -370,7 +370,6 @@ export default function LayoutABC() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled]             = useState(false);
   const [videoPlaying, setVideoPlaying]     = useState(false);
-  const [mobileServicesShown, setMobileServicesShown] = useState(4);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -379,33 +378,14 @@ export default function LayoutABC() {
   }, []);
 
   const services = [
-    // Row 1
-    { n: "01", icon: Truck,     title: "London Removals Services", href: "/services/house-removals",
+    { n: "01", icon: Truck,     title: "London Removals Services",   href: "/services/london-removals",
       desc: "Reliable London movers. Expert home removals across London and nearby areas. Fixed price, fully insured.", img: HERO_IMG },
     { n: "02", icon: Building2, title: "Office Relocation Services", href: "/services/office-relocation",
       desc: "London's trusted commercial movers. Seamless moves, expert service. Weekend and out-of-hours available.", img: OFFICE_IMG },
-    { n: "03", icon: Warehouse, title: "Storage In London",    href: "/services/storage",
-      desc: "Secure storage in London. Short and long-term storage tailored to you. Pack and storage with ease.", img: FURNITURE_IMG },
-    { n: "04", icon: Globe,     title: "International Removals", href: "/services/international-removals",
+    { n: "03", icon: Warehouse, title: "Storage In London",          href: "/storage",
+      desc: "Secure storage in London. Short and long-term storage tailored to you. Fully managed, door to door.", img: FURNITURE_IMG },
+    { n: "04", icon: Globe,     title: "International Removals",     href: "/services/international-removals",
       desc: "Comprehensive international moves to Europe within a few days delivery. Full customs documentation.", img: INTL_IMG },
-    // Row 2
-    { n: "05", icon: Package,   title: "Packing / Unpacking",  href: "/services/packing-service",
-      desc: "Professional packing with premium materials. White-glove care for antiques, artwork and fragile items.", img: PACKING_IMG },
-    { n: "06", icon: Zap,       title: "Furniture Dismantling & Reassembly", href: "/services/furniture-assembly",
-      desc: "Expert dismantling and reassembly of all furniture types. Beds, wardrobes, desks — handled with care.", img: TEAM_WORK1 },
-    { n: "07", icon: Truck,     title: "Disposal",             href: "/services/disposal",
-      desc: "Responsible disposal and recycling of unwanted items. We handle bulky waste, old furniture and appliances.", img: TEAM_WORK2 },
-    { n: "08", icon: Shield,    title: "Deep Cleaning",        href: "/services/deep-cleaning",
-      desc: "End-of-tenancy and post-move deep cleaning. Professional teams, all equipment provided.", img: TEAM_EPPING },
-    // Row 3
-    { n: "09", icon: Building2, title: "Office Clearance",     href: "/services/office-clearance",
-      desc: "Complete office clearance and decommissioning. IT equipment, furniture, confidential waste disposal.", img: TEAM_OCTAGON },
-    { n: "10", icon: Users,     title: "Porterage",            href: "/services/porterage",
-      desc: "Short-distance moves within buildings. Ideal for office reshuffles, deliveries and internal relocations.", img: TEAM_OCTAGON2 },
-    { n: "11", icon: Users,     title: "Piano & Specialist",   href: "/services/piano-removals",
-      desc: "Expert handling of pianos, antiques, fine art and high-value items. Specialist equipment, fully insured.", img: PIANO_IMG },
-    { n: "12", icon: Camera,    title: "Fine Art",             href: "/services/fine-art",
-      desc: "Museum-grade handling for paintings, sculptures and collectibles. Custom crating, climate control available.", img: TEAM_CLIENT },
   ];
 
   const reviews = [
@@ -470,7 +450,7 @@ export default function LayoutABC() {
             className="flex items-center gap-3 mb-6">
             <div className="h-px w-8" style={{ backgroundColor: GOLD }} />
             <span className="text-xs tracking-widest uppercase" style={{ color: GOLD, fontFamily: "DM Sans, sans-serif" }}>
-              London's Best Removals Company · Est. 2015
+              London's Best Removals Company · Est. 2017
             </span>
           </motion.div>
 
@@ -551,11 +531,11 @@ export default function LayoutABC() {
       <section className="py-8 px-8 md:px-14 lg:px-20" style={{ backgroundColor: CHARCOAL }}>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-0 md:justify-between">
           {[
-            { value: "4.8★",    label: "GOOGLE RATING",   sub: "320 reviews" },
-            { value: "4.9★",    label: "TRUSTPILOT",       sub: "170 reviews" },
-            { value: "11+",     label: "YEARS TRADING",    sub: "Est. 2015" },
-            { value: "15,000+", label: "MOVES COMPLETED",  sub: "Families & Businesses" },
-            { value: "£1M",     label: "FULLY INSURED",    sub: "Up to £1,000,000" },
+            { value: "4.8/5",       label: "GOOGLE RATING",  sub: "323 Reviews" },
+            { value: "4.9/5",       label: "TRUSTPILOT",     sub: "170 Reviews" },
+            { value: "11+",         label: "YEARS TRADING",  sub: "Est. 2017" },
+            { value: "15,000+",     label: "MOVES COMPLETED",sub: "Families & Businesses" },
+            { value: "Fixed Price", label: "OR HOURLY RATE", sub: "No hidden charges" },
           ].map(({ value, label, sub }) => (
             <div key={label} className="text-center px-4">
               <p className="whitespace-nowrap" style={{ fontFamily: "DM Sans, sans-serif", fontSize: "2rem", fontWeight: 700, color: GOLD, lineHeight: 1 }}>{value}</p>
@@ -590,7 +570,7 @@ export default function LayoutABC() {
           style={{ border: "1px solid #e8e8e8", borderRight: "none", borderBottom: "none" }}>
           {services.map(({ n, icon: Icon, title, desc, img, href }, i) => (
             <motion.div key={n} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i}
-              className={`group cursor-pointer overflow-hidden ${i >= mobileServicesShown ? "hidden md:block" : ""}`}
+              className="group cursor-pointer overflow-hidden"
               style={{ borderRight: "1px solid #e8e8e8", borderBottom: "1px solid #e8e8e8" }}>
               <Link href={href}>
                 <div className="relative overflow-hidden" style={{ height: "180px" }}>
@@ -615,18 +595,6 @@ export default function LayoutABC() {
           ))}
         </div>
 
-        {/* Mobile Read More button — hidden on md+ */}
-        {mobileServicesShown < services.length && (
-          <div className="flex justify-center mt-6 md:hidden">
-            <button
-              onClick={() => setMobileServicesShown(prev => Math.min(prev + 4, services.length))}
-              className="flex items-center gap-2 px-8 py-3 text-xs tracking-widest uppercase font-semibold transition-all"
-              style={{ border: `1px solid ${GOLD}`, color: GOLD, fontFamily: "DM Sans, sans-serif", backgroundColor: "transparent" }}
-            >
-              Read More <ChevronRight size={14} />
-            </button>
-          </div>
-        )}
       </section>
 
       {/* ── 6. WHY CHOOSE US ─────────────────────────────────────────── */}
